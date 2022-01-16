@@ -1,0 +1,130 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-16T14:12:38.249Z",
+    "end": "2022-01-16T14:13:37.374Z",
+    "duration": 20663,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fbdba155-4361-4578-bbc9-168cebe4ee7c",
+      "title": "",
+      "fullFile": "cypress/integration/feature/shopistCart/shopistCart.feature",
+      "file": "cypress/integration/feature/shopistCart/shopistCart.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e480069-6306-4da3-bc9d-3339bf2bee35",
+          "title": "Allow user to add the items into the cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User adds the item to cart and veirfy the details",
+              "fullTitle": "Allow user to add the items into the cart User adds the item to cart and veirfy the details",
+              "timedOut": null,
+              "duration": 16411,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '1237.00' to include 1244",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '1237.00' to include 1244\n    at ShopistCartPage.validateText (https://www.shopist.io/__cypress/tests?p=cypress/integration/feature/shopistCart/shopistCart.feature:140:48)\n    at Context.eval (https://www.shopist.io/__cypress/tests?p=cypress/integration/feature/shopistCart/shopistCart.feature:261:31)\n    at Context.resolveAndRunStepDefinition (https://www.shopist.io/__cypress/tests?p=cypress/integration/feature/shopistCart/shopistCart.feature:12557:29)\n    at Context.eval (https://www.shopist.io/__cypress/tests?p=cypress/integration/feature/shopistCart/shopistCart.feature:11878:35)",
+                "diff": null
+              },
+              "uuid": "d0a00606-9bb0-458a-a964-7bf95ccc459d",
+              "parentUUID": "2e480069-6306-4da3-bc9d-3339bf2bee35",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User is trying to apply the invalid discount code",
+              "fullTitle": "Allow user to add the items into the cart User is trying to apply the invalid discount code",
+              "timedOut": null,
+              "duration": 4252,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "4e1e9240-216d-4a19-8d14-404976cacf4d",
+              "parentUUID": "2e480069-6306-4da3-bc9d-3339bf2bee35",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4e1e9240-216d-4a19-8d14-404976cacf4d"
+          ],
+          "failures": [
+            "d0a00606-9bb0-458a-a964-7bf95ccc459d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 20663,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

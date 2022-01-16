@@ -4,8 +4,13 @@
   "description": "This is for cypress assignment",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "npx cypress open"
+    "pretest": "rm -rf ./cypress/reports && mkdir cypress/reports",
+    "test": "npm run cypress:test || npm run posttest",
+    "posttest": "npm run merge-report && npm run generate-report",
+    "cypress:test": "cypress run",
+    "cypress:open": "npx cypress open",
+    "merge-report": "mochawesome-merge ./cypress/reports/*.json > mochawesome.json",
+    "generate-report": "marge mochawesome.json --reportDir cypress/reports"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,8 @@
   },
   "homepage": "https://github.com/shubhamjain3191/CyAssignment1#readme",
   "dependencies": {
-    "cypress": "^9.2.1"
+    "cypress": "^9.2.1",
+    "mochawesome-merge": "^4.2.1"
   },
   "devDependencies": {
     "cypress-cucumber-preprocessor": "^4.3.1",
