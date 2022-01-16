@@ -1,2 +1,15 @@
 # CyAssignment1
-This is for cypress assignment
+Cypress Assignment
+
+### Quick Start
+
+```shell
+$ git https://github.com/shubhamjain3191/CyAssignment1.git
+$ cd CyAssignment1
+$ npm install
+$ npm run cypress:open
+```
+
+### Branches
+
+* **main**: Main branch
