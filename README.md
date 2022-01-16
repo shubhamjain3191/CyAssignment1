@@ -7,7 +7,7 @@ Cypress Assignment
 $ git https://github.com/shubhamjain3191/CyAssignment1.git
 $ cd CyAssignment1
 $ npm install
-$ npm run cypress:open
+$ npm run test
 ```
 
 ### Branches
